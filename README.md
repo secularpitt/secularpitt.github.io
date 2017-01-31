@@ -1,2 +1,3 @@
 # pitt-ssa
-Website for Pitt Secular Alliance
+
+### Website for Pitt Secular Alliance

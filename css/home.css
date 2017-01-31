@@ -1,0 +1,22 @@
+.navbar {
+  margin-bottom: 0;
+}
+
+.full-page-image {
+  margin-top: 0;
+  height: 90vh;
+  background-image: url("../img/space.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.centered-content {
+  text-align: center;
+  width: 100%;
+  background-color: rgba(22, 22, 22, 0.6);
+  color: white;
+  margin-top: 1em;
+  padding-top: 0;
+  padding-bottom: 1em;
+}
