@@ -22,3 +22,22 @@
 .navbar-toggle {
   border: none;
 }
+.box {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  text-align: center;
+}
+.box p {
+  font-size: 1.5em;
+}
+.vertically-center {
+  height: 11em;
+  display: flex;
+  align-items: center;
+}
+.glyphicon-comment {
+  font-size: 10em;
+  color: #02cf9e;
+  color: #029acf;
+  padding-bottom: .25em;
+}
