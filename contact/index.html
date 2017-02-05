@@ -1,0 +1,52 @@
+---
+title: Contact
+permalink: /contact/
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include head.html %}
+    <title>Contact Us | Pitt Secular Alliance</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Contact Us</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="alert alert-dismissible alert-success hidden" id="success-alert">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        Your message has been successfully submitted!
+      </div>
+      <form method="post" action="/">
+        <fieldset>
+          <div class="form-group">
+            <label for="name">Please enter your name</label>
+            <input class="form-control" type="text" name="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Please enter your email address so we can get back to you</label>
+            <input class="form-control" required type="email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="message">Please enter your message</label>
+            <textarea class="form-control" required name="message"></textarea>
+          </div>
+          <div class="form-group">
+            <div class="checkbox">
+              <label for="email-list"><input type="checkbox" name="email-list"> I would like to be added to your email list</label>
+            </div>
+          </div>
+        </fieldset>
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">Submit</button>
+          <button class="btn btn-default" type="reset">Clear</button>
+        </div>
+      </form>
+    </div>
+    {* include scripts.html %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/js/form.js"></script>
+  </body>
+</html>
