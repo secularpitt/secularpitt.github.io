@@ -1,12 +1,11 @@
+/* global $ */
+
 (function() {
   $(document).ready(function() {
     var iframeLoaded = false;
-    $('input[name=email-list]').click(function(e) {
-      var list = ($('input[name=email-list]').prop('checked')) ? 'Yes' : '';
-      $('input[name="entry.214764784"]').val(list);
-    });
+    $('input[name=email-list]').change(updateCheckboxInput);
 
-    $('form').submit(function(e) {
+    $('form').submit(function() {
       iframeLoaded = false;
       window.setTimeout(function() {
         if(iframeLoaded) {
@@ -17,9 +16,16 @@
         }
       }, 1000);
     });
-    
+
+    $('form').on('reset', () => window.setTimeout(updateCheckboxInput, 0));
+
     $('iframe').on('load', function() {
       iframeLoaded = true;
     });
+
+    function updateCheckboxInput() {
+      var list = ($('input[name=email-list]').prop('checked')) ? 'Yes' : '';
+      $('input[name="entry.214764784"]').val(list);
+    }
   });
 })();
