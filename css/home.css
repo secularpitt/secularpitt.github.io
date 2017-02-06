@@ -41,7 +41,8 @@
 }
 
 #box1 {
-  background-color: #00ced1;
+  background-color: #50ded1;
+  background-color: rgb(0, 180, 210);
   color: white;
 }
 #box1 blockquote small {
@@ -50,4 +51,11 @@
 
 blockquote {
   border-color: #444;
+}
+
+footer {
+  background-color: #333;
+}
+footer h5 {
+  color: white;
 }
