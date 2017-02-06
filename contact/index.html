@@ -13,36 +13,37 @@ permalink: /contact/
     <div class="jumbotron">
       <div class="container">
         <h1>Contact Us</h1>
+        <p>Fill out the form below or send us an email at <a href="mailto:secularpitt@gmail.com">secularpitt@gmail.com</a></p>
       </div>
     </div>
     <div class="container">
       <div class="alert alert-dismissible alert-success hidden" id="success-alert">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <button type="button" class="close" onclick="$('#success-alert').addClass('hidden')">&times;</button>
         Your message has been successfully submitted!
       </div>
       <div class="alert alert-dismissible alert-danger hidden" id="failure-alert">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <button type="button" class="close" onclick="$('#failure-alert').addClass('hidden')">&times;</button>
         Something went wrong. Please check your connection and try again!
       </div>
       <form method="post" action="https://docs.google.com/forms/d/e/1FAIpQLScYLomzA21CSZ2IQo8Ls5tSKccgpvUOofqNlSSOEVF_ksZp4w/formResponse" target="bs-iframe">
         <fieldset>
           <div class="form-group">
-            <label for="entry.748603620">Please enter your name</label>
-            <input class="form-control" type="text" name="entry.748603620">
+            <label for="entry.748603620">Name</label>
+            <input class="form-control" required type="text" name="entry.748603620">
           </div>
-          <div class="entry.1018829523">
-            <label for="email">Please enter your email address so we can get back to you</label>
+          <div class="form-group">
+            <label for="entry.1018829523">Email address</label>
             <input class="form-control" required type="email" name="entry.1018829523">
           </div>
           <div class="form-group">
-            <label for="entry.2042971329">Please enter your message</label>
+            <label for="entry.2042971329">Message</label>
             <textarea class="form-control" required name="entry.2042971329"></textarea>
           </div>
           <div class="form-group">
             <div class="checkbox">
-              <label for="email-list"><input type="checkbox" name="email-list"> I would like to be added to your email list</label>
+              <label for="email-list"><input type="checkbox" name="email-list" checked> I would like to be added to your email list</label>
             </div>
-            <input name="entry.214764784" type="hidden">
+            <input name="entry.214764784" type="hidden" value="Yes">
           </div>
         </fieldset>
         <div class="form-group">
@@ -53,7 +54,6 @@ permalink: /contact/
     </div>
     <iframe class="hidden" name="bs-iframe"></iframe>
     {% include scripts.html %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="/js/form.js"></script>
   </body>
 </html>
