@@ -1,5 +1,10 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{% if {{page.title}} == 'Home' %}
+<title>Pitt Secular Alliance</title>
+{% else %}
+<title>{{ page.title }} | Pitt Secular Alliance</title>
+{% endif %}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/simplex/bootstrap.min.css">
 <script src="https://use.fonticons.com/8c4f3c3d.js"></script>
