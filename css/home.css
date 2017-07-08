@@ -3,7 +3,7 @@
 }
 .full-page-image {
   margin-top: 0;
-  height: calc(100vh - 6em);
+  height: 80vh;
   background: url("../img/space.jpg") #029acf;
   background-size: cover;
   background-position: 50%;
