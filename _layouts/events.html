@@ -1,0 +1,23 @@
+---
+layout: events
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    {% include navbar.html %}
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Upcoming Events</h1>
+      </div>
+    </div>
+    <div class="container">
+      {{ content }}
+    </div>
+    {% include scripts.html %}
+  </body>
+
+</html>
