@@ -1,6 +1,3 @@
-.navbar {
-  margin-bottom: 0;
-}
 .full-page-image {
   margin-top: 0;
   height: 70vh;
@@ -19,9 +16,7 @@
   padding-top: 0;
   padding-bottom: 1em;
 }
-.navbar-toggle {
-  border: none;
-}
+
 .box {
   padding-top: 2em;
   padding-bottom: 1em;
@@ -51,11 +46,4 @@
 
 blockquote {
   border-color: #444;
-}
-
-footer {
-  background-color: #333;
-}
-footer h5 {
-  color: white;
 }

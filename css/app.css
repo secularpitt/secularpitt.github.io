@@ -1,0 +1,12 @@
+.navbar {
+  margin-bottom: 0;
+}
+.navbar-toggle {
+  border: none;
+}
+footer {
+  background-color: #333;
+}
+footer h5 {
+  color: white;
+}
