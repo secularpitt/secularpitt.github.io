@@ -1,8 +1,17 @@
+body {
+  padding-top: 3em;
+}
+.innerbody {
+  min-height: calc(100vh - 6em);
+}
 .navbar {
   margin-bottom: 0;
 }
 .navbar-toggle {
   border: none;
+}
+.jumbotron {
+  margin-bottom: 0;
 }
 footer {
   background-color: #333;
