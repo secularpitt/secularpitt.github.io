@@ -1,6 +1,9 @@
 body {
   padding-top: 3em;
 }
+h1, h2, h3 {
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
+}
 .innerbody {
   min-height: calc(100vh - 6em);
 }
@@ -19,4 +22,11 @@ footer {
 }
 footer h5 {
   color: white;
+}
+.jumbotron {
+  background-color: white;
+  color: #222;
+}
+.jumbotron h1 {
+  font-weight: 400;
 }
