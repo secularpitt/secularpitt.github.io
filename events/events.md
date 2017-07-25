@@ -6,7 +6,7 @@ permalink: /events/
 {: .text-info}
 ## August 2017
 - #### **Sunday, 8/27** – Fall Activities Fair
-Come get information about our club and say hi at the fall activities fair.
+Come get information about our club and say hi at the fall activities fair! We will also have stickers and other fun stuff so make sure to find us.
 
 {: .text-info}
 ## September 2017
