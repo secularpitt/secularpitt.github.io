@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mailing List Signup | Pitt Secular Alliance</title>
+    <link rel="stylesheet" href="http://noahscholfield.com/css/bootstrap-yeti.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400">
+    <link rel="stylesheet" href="mailchimp.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pitt Secular Alliance Mailing List</h1>
+      <h4 class="text-info">Sign up for our mailing list to stay informed about our upcoming meeting topics and events!</h4>
+      <br>
+      <h4 class="text-success" id="successmess"></h4>
+      <h4 class="text-danger" id="errormess"></h4>
+      <form>
+        <fieldset>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input class="form-control" name="email" placeholder="abc123@pitt.edu" type="email" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label for="FNAME">First Name</label>
+            <input class="form-control" name="FNAME" type="text" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label for="LNAME">Last Name</label>
+            <input class="form-control" name="LNAME" type="text" autocomplete="off">
+          </div>
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-success">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+  <script src="mailchimp.js"></script>
+</html>
