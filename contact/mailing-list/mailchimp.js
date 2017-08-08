@@ -26,14 +26,14 @@
       .then(blob => blob.json())
       .then(data => {
         if(data.success) {
-          successMess.innerHTML = data.message;
+          displayMessage('success', data.message);
           form.reset();
         } else {
-          errorMess.innerHTML = data.message;
+          displayMessage('error', data.message);
         }
       })
       .catch((err) => {
-        errorMess.innerHTML = 'Something is wrong. Try again!';
+        displayMessage('error', 'Something is wrong. Try again!');
         console.log('Error', err);
       });
   }
@@ -41,6 +41,15 @@
   function clearMessages() {
     errorMess.innerHTML = '';
     successMess.innerHTML = '';
+  }
+
+  function displayMessage(type, message) {
+    if(type === 'error') {
+      errorMess.innerHTML = message;
+    } else {
+      successMess.innerHTML = message;
+    }
+    window.setTimeout(clearMessages, 3000);
   }
 
   form.addEventListener('submit', subscribe);
