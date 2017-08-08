@@ -1,7 +1,7 @@
 body {
   height: 100vh;
   color: white;
-  background-image: url('/img/space.jpg');
+  background-image: url('/img/space.jpg'), linear-gradient(#5b86e5, #36d1dc);
   background-size: cover;
   display: flex;
   align-items: center;
