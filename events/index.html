@@ -17,6 +17,7 @@ permalink: /events/
     </div>
     <div class="container">
       <div id="calendar">
+        <h3 class="text-info text-center" v-if="!events || events.length === 0">Oops... Looks like there aren't any events or they aren't loading right now.</h3>
         <ul>
           <li class="event" v-for="event in events" :key="event.id">
             <h4 :id="event.start | id"><strong>{{ "{{event.start | date "}} }}</strong> – {{ "{{ event.summary "}} }}</h4>
