@@ -4,14 +4,12 @@ const calendarID = 'secularpitt@gmail.com';
 const numOfResults = 10;
 const API_KEY = 'AIzaSyBILdBYibAQSy_7LMncr40hmLOLgDj4XFI';
 
-const calURL = `https://www.googleapis.com/calendar/v3/calendars/${calendarID}/events?maxResults=${numOfResults}&orderBy=startTime&singleEvents=true&timeMin=${now.toISOString()}&key=${API_KEY}`;
+const calURL = 'https://www.googleapis.com/calendar/v3/calendars/'+ calendarID + '/events?maxResults=' + numOfResults + '&orderBy=startTime&singleEvents=true&timeMin=' + now.toISOString() + '&key=' + API_KEY;
 
 var calendar = new Vue({
   el: '#calendar',
   data: {
-    title: 'Test',
-    events: [],
-    now: Date.now()
+    events: []
   },
   methods: {
     getCalendarEvents() {
