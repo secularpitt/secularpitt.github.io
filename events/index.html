@@ -27,9 +27,9 @@ permalink: /events/
           <li class="event" v-for="event in events" :key="event.id">
             <h4 :id="event.start | id"><strong>{{ "{{event.start | date "}} }}</strong> – {{ "{{ event.summary "}} }}</h4>
             <p class="text-primary"><span class="glyphicon glyphicon-map-marker"></span> {{ "{{ event.location || 'TBA' "}} }}</p>
-            <p v-if="event.description && event.description[0]">{{ "{{ event.description[0] "}} }}</p>
-            <ul v-if="event.description && event.description[1]">
-              <li><em>{{ "{{ event.description[1] "}} }}</em></li>
+            <p v-if="event.description">{{ "{{ event.description "}} }}</p>
+            <ul v-if="event.bullets">
+              <li v-for="bullet in event.bullets"><em>{{ "{{ bullet "}} }}</em></li>
             </ul>
           </li>
         </ul>

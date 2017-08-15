@@ -17,7 +17,7 @@ var calendar = new Vue({
         .then(blob => blob.json())
         .then(data => this.events = data.items)
         .then(() => this.events.forEach(item => {
-          item.description = (item.description) ? item.description.split('--'): ['',''];
+          [item.description, ...item.bullets] = (item.description) ? item.description.split('--'): [];
         }))
         .catch((response) => console.log('Error', response));
     }
@@ -27,15 +27,12 @@ var calendar = new Vue({
   },
   filters: {
     date(value) {
-      if(value.date) {
-        return moment(value.date).format('dddd, M/D');
-      } else {
-        return moment(value.dateTime).format('dddd, M/D @ ha');
-      }
+      const [date, format] = (value.date) ? [value.date, 'dddd, M/D']: [value.dateTime, 'dddd, M/D @ ha'];
+      return moment(date).format(format);
     },
     id(value) {
-      const startDate = (value.date) ? value.date: value.dateTime;
-      return moment(startDate).format('MM-DD-YYYY');
+      const date = (value.date) ? value.date: value.dateTime;
+      return moment(date).format('MM-DD-YYYY');
     }
   }
 });
