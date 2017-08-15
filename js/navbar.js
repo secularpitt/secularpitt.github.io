@@ -5,11 +5,6 @@ var navbar = new Vue({
     page: '',
     collapsed: true,
   },
-  computed: {
-    collapse() {
-      return this.collapsed ? 'collapse' : '';
-    }
-  },
   methods: {
     toggleCollapsed() {
       this.collapsed = !this.collapsed;

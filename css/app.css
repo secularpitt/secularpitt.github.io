@@ -33,3 +33,17 @@ footer h5 {
 .jumbotron h1 {
   font-weight: 400;
 }
+/* navbar transitions */
+.expand-enter-active, .expand-leave-active {
+  transition: height .5s;
+  overflow-y: hidden;
+}
+.expand-enter-active, .expand-leave-active {
+  height: 245px;
+}
+.expand-enter, .expand-leave-to {
+  height: 0;
+}
+.navbar {
+  background-color: rgba(255, 255, 255, 0.98);
+}
