@@ -10,6 +10,12 @@ permalink: /events/
       ul {
         padding-left: 20px;
       }
+      em a {
+        color: #3a87ad;
+      }
+      em a:hover {
+        color: #2d6987;
+      }
     </style>
   </head>
   <body>
@@ -29,7 +35,7 @@ permalink: /events/
             <p class="text-primary"><span class="glyphicon glyphicon-map-marker"></span> {{ "{{ event.location || 'TBA' "}} }}</p>
             <p v-if="event.description">{{ "{{ event.description "}} }}</p>
             <ul v-if="event.bullets">
-              <li v-for="bullet in event.bullets"><em>{{ "{{ bullet "}} }}</em></li>
+              <li v-for="bullet in event.bullets"><em v-html="bullet"></em></li>
             </ul>
           </li>
         </ul>
@@ -40,6 +46,7 @@ permalink: /events/
     {% include scripts.html %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/autolinker/1.4.3/Autolinker.min.js"></script>
     <script src="/js/events.js"></script>
   </body>
 </html>
