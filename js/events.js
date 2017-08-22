@@ -18,6 +18,7 @@ var calendar = new Vue({
         .then(data => this.events = data.items)
         .then(() => this.events.forEach(item => {
           [item.description, ...item.bullets] = (item.description) ? item.description.split('--'): [];
+          item.bullets.forEach((bullet, i, arr) => arr[i] = Autolinker.link(bullet));
         }))
         .catch((response) => console.log('Error', response));
     }
