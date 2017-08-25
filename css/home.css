@@ -29,10 +29,21 @@
   display: flex;
   align-items: center;
 }
-.glyphicon-comment {
+
+.display-icon {
   font-size: 10em;
+}
+.glyphicon-comment {
   color: #029acf;
-  padding-bottom: .25em;
+  /*padding-bottom: .25em;*/
+}
+.glyphicon-calendar {
+  color: #43AC6A;
+}
+@media (max-width: 768px) {
+  .display-icon {
+    font-size: 6em;
+  }
 }
 
 #box1 {
@@ -44,6 +55,9 @@
   color: #444;
 }
 
+a.text-info {
+  font-weight: 400;
+}
 blockquote {
   border-color: #444;
 }
