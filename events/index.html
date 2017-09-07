@@ -33,10 +33,7 @@ permalink: /events/
           <li class="event" v-for="event in events" :key="event.id">
             <h4 :id="event.start | id"><strong>{{ "{{event.start | date "}} }}</strong> – {{ "{{ event.summary "}} }}</h4>
             <p class="text-primary"><span class="glyphicon glyphicon-map-marker"></span> {{ "{{ event.location || 'TBA' "}} }}</p>
-            <p v-if="event.description">{{ "{{ event.description "}} }}</p>
-            <ul v-if="event.bullets">
-              <li v-for="bullet in event.bullets"><em v-html="bullet"></em></li>
-            </ul>
+            <div v-html="mdToHTML(event.description)"></div>
           </li>
         </ul>
       </div>
@@ -47,6 +44,7 @@ permalink: /events/
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/autolinker/1.4.3/Autolinker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.4.0/markdown-it.min.js"></script>
     <script src="/js/events.js"></script>
   </body>
 </html>
