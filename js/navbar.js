@@ -2,7 +2,7 @@
 var navbar = new Vue({
   el: '#navbar',
   data: {
-    page: '',
+    page: location.pathname.slice(1,-1),
     collapsed: true,
   },
   methods: {
