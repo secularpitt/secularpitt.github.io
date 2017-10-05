@@ -11,13 +11,15 @@ var calendar = new Vue({
   el: '#calendar',
   data: {
     events: [],
+    status: 'Loading events...'
   },
   methods: {
     getCalendarEvents() {
       fetch(calURL)
         .then(blob => blob.json())
         .then(data => this.events = data.items)
-        .catch((response) => console.log('Error', response));
+        .then(() => this.status = (this.events.length === 0) ? 'No events were found' : '')
+        .catch(() => this.status = 'Oops... Looks like there was a problem loading the events.');
     },
     mdToHTML(markdown) {
       return Autolinker.link((markdown) ? md.render(markdown): '', {className: 'text-info'});
