@@ -1,6 +1,6 @@
 /* global Vue: false, moment: false, markdownit: false, Autolinker: false */
 const now = new Date();
-const md = markdownit();
+const md = markdownit({html: true});
 const calendarID = 'secularpitt@gmail.com';
 const numOfResults = 10;
 const API_KEY = 'AIzaSyBILdBYibAQSy_7LMncr40hmLOLgDj4XFI';
