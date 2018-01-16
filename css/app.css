@@ -1,8 +1,6 @@
-body {
-  padding-top: 3em;
-}
 h1, h2, h3 {
   font-family: 'Montserrat', 'Open Sans', sans-serif;
+  font-weight: 300;
 }
 p, li {
   font-size: 14px;
@@ -10,21 +8,11 @@ p, li {
 .innerbody {
   min-height: calc(100vh - 6em);
 }
-.navbar {
-  margin-bottom: 0;
-}
-.navbar-toggle {
+.navbar-toggler {
   border: none;
 }
 .jumbotron {
   margin-bottom: 0;
-}
-footer {
-  background-color: #333;
-  margin-top: 0.5em;
-}
-footer h5 {
-  color: white;
 }
 .jumbotron {
   background-color: white;
@@ -39,11 +27,20 @@ footer h5 {
   overflow-y: hidden;
 }
 .expand-enter-active, .expand-leave-active {
-  height: 245px;
+  height: 340px;
 }
 .expand-enter, .expand-leave-to {
   height: 0;
 }
-.navbar {
+.bg-translucent {
   background-color: rgba(255, 255, 255, 0.98);
+}
+.active .nav-link, .nav-link:hover, .navbar-brand:hover {
+  color: var(--red) !important;
+}
+
+@media (max-width: 576px) {
+  .display-4 {
+    font-size: 2rem;
+  }
 }
