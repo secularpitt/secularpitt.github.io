@@ -3,18 +3,16 @@
   height: 70vh;
   background: url("../img/space.jpg") #029acf;
   background-size: cover;
+  background-attachment: fixed;
   background-position: 50%;
   display: flex;
   align-items: center;
 }
 .centered-content {
-  text-align: center;
   width: 100%;
-  background-color: rgba(22, 22, 22, 0.6);
+  background-color: transparent;
   color: white;
-  margin-top: 1em;
-  padding-top: 0;
-  padding-bottom: 1em;
+  padding-left: 1rem;
 }
 
 .box {
@@ -32,26 +30,28 @@
 
 .display-icon {
   font-size: 10em;
+  margin-bottom: .25em;
 }
-.glyphicon-comment {
+.fa-comment {
   color: #029acf;
-  /*padding-bottom: .25em;*/
 }
-.glyphicon-calendar {
+.fa-calendar-alt {
   color: #43AC6A;
 }
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .display-icon {
     font-size: 6em;
+  }
+  .display-3 {
+    font-size: 3.5rem;
   }
 }
 
 #box1 {
-  background-color: #50ded1;
   background-color: rgb(0, 180, 210);
   color: white;
 }
-#box1 blockquote small {
+#box1 .blockquote-footer {
   color: #444;
 }
 
@@ -59,5 +59,6 @@ a.text-info {
   font-weight: 400;
 }
 blockquote {
-  border-color: #444;
+  border-left: 5px solid #444;
+  padding: .5em 1em;
 }
