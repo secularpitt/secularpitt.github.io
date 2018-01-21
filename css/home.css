@@ -3,8 +3,8 @@
   height: 70vh;
   background: url("../img/space.jpg") #029acf;
   background-size: cover;
+  background-position: 85%;
   background-attachment: fixed;
-  background-position: 50%;
   display: flex;
   align-items: center;
 }
@@ -12,7 +12,9 @@
   width: 100%;
   background-color: transparent;
   color: white;
-  padding-left: 1rem;
+}
+.centered-content > .container {
+  padding: 0;
 }
 
 .box {

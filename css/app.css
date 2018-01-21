@@ -6,7 +6,7 @@ p, li {
   font-size: 14px;
 }
 .innerbody {
-  min-height: calc(100vh - 6em);
+  min-height: calc(100vh - 54px);
 }
 .navbar-toggler {
   border: none;
