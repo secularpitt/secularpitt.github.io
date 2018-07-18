@@ -19,10 +19,19 @@ var calendar = new Vue({
         .then(blob => blob.json())
         .then(data => this.events = data.items)
         .then(() => this.status = (this.events.length === 0) ? 'No events were found' : '')
+        .then(() => this.highlightToday())
         .catch(() => this.status = 'Oops... Looks like there was a problem loading the events.');
     },
     mdToHTML(markdown) {
       return Autolinker.link((markdown) ? md.render(markdown): '', {className: 'text-info'});
+    },
+    highlightToday() {
+      const idForToday = this.$options.filters.id(now);
+      const eventTitles = document.getElementsByClassName('js-event-title');
+      for(const title of eventTitles) {
+        if(title.dataset.eventDate === idForToday) { title.classList.add('text-info'); }
+        else { break; } // events for today will only ever be at the beginning
+      }
     }
   },
   mounted() {
