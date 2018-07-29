@@ -5,6 +5,10 @@ h1, h2, h3 {
 p, li {
   font-size: 14px;
 }
+footer {
+  display: flex;
+  justify-content: space-between;
+}
 .innerbody {
   min-height: calc(100vh - 54px);
 }
@@ -42,5 +46,8 @@ p, li {
 @media (max-width: 576px) {
   .display-4 {
     font-size: 2rem;
+  }
+  footer {
+    flex-direction: column;
   }
 }
