@@ -25,10 +25,10 @@ footer {
 .jumbotron h1 {
   font-weight: 400;
   background-image: url('/img/space.jpg');
+  background-size: cover;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  background-position: top;
 }
 /* navbar transitions */
 .expand-enter-active, .expand-leave-active {
