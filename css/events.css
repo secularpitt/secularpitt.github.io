@@ -1,0 +1,15 @@
+ul {
+  padding-left: 20px;
+}
+.event a {
+  color: #3a87ad;
+}
+.event a:hover {
+  color: #2d6987;
+}
+.event p {
+  margin-bottom: .5rem;
+}
+.event {
+  margin-bottom: .5rem;
+}
